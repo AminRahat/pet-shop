@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet-Shop</title>
+    <!-- tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .adlam-display-regular {
+        font-family: "ADLaM Display", serif;
+      }
+    </style>
+  </head>
+
+  <body class="adlam-display-regular bg-yellow-50">
+    <nav class="w-full">
+      <div class="flex justify-between items-center px-44 py-2 bg-yellow-200">
+        <div class="flex items-center gap-3">
+          <img src="./assets/logo-header.png" alt="logo" />
+          <span>Browse<span class="text-yellow-500">4</span>Pets</span>
+        </div>
+        <div class="flex gap-2">
+          <a href="#" class="">Find a pet</a>
+          <a href="#" class="">Breeds</a>
+          <a href="#" class="">Contact us</a>
+        </div>
+        <div class="flex gap-2">
+          <a href="#"
+            ><img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/material-outlined/24/filled-appointment-reminders.png"
+              alt="filled-appointment-reminders"
+          /></a>
+          <a href="#">
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/ios/50/search--v1.png"
+              alt="search--v1"
+            />
+          </a>
+          <button class="btn btn-outline">Login</button>
+          <button class="btn btn-warning">Register</button>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero section -->
+    <!-- <section>
+      <h1>Pamper Your Pet, Because They Deserve the Bes</h1>
+      <p>
+        Discover a world of treats, toys, and essentials handpicked for your
+        furry friends. Shop now and make tails wag with joy!
+      </p>
+      <button>Find a pet</button>
+    </section> -->
+    <div
+      class="min-h-[90vh] bg-no-repeat mb-24"
+      style="background-image: url(./assets/cat-big.png)"
+    >
+      <div class="px-44 pt-24">
+        <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">
+            Pamper Your Pet, Because They Deserve the Bes
+          </h1>
+          <p class="mb-5">
+            Discover a world of treats, toys, and essentials handpicked for your
+            furry friends. Shop now and make tails wag with joy!
+          </p>
+          <button class="btn btn-warning">Find a pet</button>
+        </div>
+      </div>
+    </div>
+    <!-- Categories section -->
+    <section class="px-44 mb-8">
+      <h2 class="text-2xl mb-10">Browse By Categories</h2>
+      <div class="flex justify-between w-full">
+        <div
+          class="bg-yellow-400 flex items-center justify-center py-4 gap-2 flex-col rounded-lg px-8"
+        >
+          <img
+            class="bg-white rounded-full p-4"
+            src="./assets/dog-cartoon.png"
+            alt="dog"
+          />
+          <h3>Dog</h3>
+          <p>3 items</p>
+        </div>
+        <div
+          class="bg-yellow-400 flex items-center justify-center py-4 gap-2 flex-col rounded-lg px-8"
+        >
+          <img
+            class="bg-white rounded-full p-4"
+            src="./assets/dog-cartoon.png"
+            alt="dog"
+          />
+          <h3>Dog</h3>
+          <p>3 items</p>
+        </div>
+        <div
+          class="bg-yellow-400 flex items-center justify-center py-4 gap-2 flex-col rounded-lg px-8"
+        >
+          <img
+            class="bg-white rounded-full p-4"
+            src="./assets/dog-cartoon.png"
+            alt="dog"
+          />
+          <h3>Dog</h3>
+          <p>3 items</p>
+        </div>
+        <div
+          class="bg-yellow-400 flex items-center justify-center py-4 gap-2 flex-col rounded-lg px-8"
+        >
+          <img
+            class="bg-white rounded-full p-4"
+            src="./assets/dog-cartoon.png"
+            alt="dog"
+          />
+          <h3>Dog</h3>
+          <p>3 items</p>
+        </div>
+        <div
+          class="bg-yellow-400 flex items-center justify-center py-4 gap-2 flex-col rounded-lg px-8"
+        >
+          <img
+            class="bg-white rounded-full p-4"
+            src="./assets/dog-cartoon.png"
+            alt="dog"
+          />
+          <h3>Dog</h3>
+          <p>3 items</p>
+        </div>
+        <div
+          class="bg-yellow-400 flex items-center justify-center py-4 gap-2 flex-col rounded-lg px-8"
+        >
+          <img
+            class="bg-white rounded-full p-4"
+            src="./assets/dog-cartoon.png"
+            alt="dog"
+          />
+          <h3>Dog</h3>
+          <p>3 items</p>
+        </div>
+      </div>
+    </section>
+    <!-- Trending section  -->
+    <section class="px-44 mb-8">
+      <h2 class="text-2xl mb-10">Trending Pet Products</h2>
+      <div class="flex gap-6">
+        <div class="bg-yellow-100 p-4 min-h-[48vh] w-4/12 relative">
+          <h3 class="text-xl mb-6">T-Shirt For Dogs</h3>
+          <p>Discover a world of treats, toys, and essentials handpicked for</p>
+          <button class="btn">Shop Now</button>
+          <img
+            class="absolute bottom-0 right-0"
+            src="./assets/cute-pet-small.png"
+            alt="dog"
+          />
+        </div>
+        <div class="grid grid-cols-3 gap-2 w-8/12">
+          <div class="bg-white px-10 py-2 flex gap-4 items-center">
+            <img src="./assets/dog-cartoon.png" alt="dog" />
+            <div class="flex justify-center flex-col">
+              <p>
+                <img
+                  style="display: inline-block; margin-right: 4px"
+                  width="24"
+                  height="24"
+                  src="https://img.icons8.com/emoji/48/star-emoji.png"
+                  alt="star-emoji"
+                /><span>4.5</span>
+              </p>
+              <h4>Pet Bed</h4>
+              <p>$39.99</p>
+            </div>
+          </div>
+          <div class="bg-white px-10 py-2 flex gap-4 items-center">
+            <img src="./assets/dog-cartoon.png" alt="dog" />
+            <div class="flex justify-center flex-col">
+              <p>
+                <img
+                  style="display: inline-block; margin-right: 4px"
+                  width="24"
+                  height="24"
+                  src="https://img.icons8.com/emoji/48/star-emoji.png"
+                  alt="star-emoji"
+                /><span>4.5</span>
+              </p>
+              <h4>Pet Bed</h4>
+              <p>$39.99</p>
+            </div>
+          </div>
+          <div class="bg-white px-10 py-2 flex gap-4 items-center">
+            <img src="./assets/dog-cartoon.png" alt="dog" />
+            <div class="flex justify-center flex-col">
+              <p>
+                <img
+                  style="display: inline-block; margin-right: 4px"
+                  width="24"
+                  height="24"
+                  src="https://img.icons8.com/emoji/48/star-emoji.png"
+                  alt="star-emoji"
+                /><span>4.5</span>
+              </p>
+              <h4>Pet Bed</h4>
+              <p>$39.99</p>
+            </div>
+          </div>
+          <div class="bg-white px-10 py-2 flex gap-4 items-center">
+            <img src="./assets/dog-cartoon.png" alt="dog" />
+            <div class="flex justify-center flex-col">
+              <p>
+                <img
+                  style="display: inline-block; margin-right: 4px"
+                  width="24"
+                  height="24"
+                  src="https://img.icons8.com/emoji/48/star-emoji.png"
+                  alt="star-emoji"
+                /><span>4.5</span>
+              </p>
+              <h4>Pet Bed</h4>
+              <p>$39.99</p>
+            </div>
+          </div>
+          <div class="bg-white px-10 py-2 flex gap-4 items-center">
+            <img src="./assets/dog-cartoon.png" alt="dog" />
+            <div class="flex justify-center flex-col">
+              <p>
+                <img
+                  style="display: inline-block; margin-right: 4px"
+                  width="24"
+                  height="24"
+                  src="https://img.icons8.com/emoji/48/star-emoji.png"
+                  alt="star-emoji"
+                /><span>4.5</span>
+              </p>
+              <h4>Pet Bed</h4>
+              <p>$39.99</p>
+            </div>
+          </div>
+          <div class="bg-white px-10 py-2 flex gap-4 items-center">
+            <img src="./assets/dog-cartoon.png" alt="dog" />
+            <div class="flex justify-center flex-col">
+              <p>
+                <img
+                  style="display: inline-block; margin-right: 4px"
+                  width="24"
+                  height="24"
+                  src="https://img.icons8.com/emoji/48/star-emoji.png"
+                  alt="star-emoji"
+                /><span>4.5</span>
+              </p>
+              <h4>Pet Bed</h4>
+              <p>$39.99</p>
+            </div>
+          </div>
+          <div class="bg-white px-10 py-2 flex gap-4 items-center">
+            <img src="./assets/dog-cartoon.png" alt="dog" />
+            <div class="flex justify-center flex-col">
+              <p>
+                <img
+                  style="display: inline-block; margin-right: 4px"
+                  width="24"
+                  height="24"
+                  src="https://img.icons8.com/emoji/48/star-emoji.png"
+                  alt="star-emoji"
+                /><span>4.5</span>
+              </p>
+              <h4>Pet Bed</h4>
+              <p>$39.99</p>
+            </div>
+          </div>
+          <div class="bg-white px-10 py-2 flex gap-4 items-center">
+            <img src="./assets/dog-cartoon.png" alt="dog" />
+            <div class="flex justify-center flex-col">
+              <p>
+                <img
+                  style="display: inline-block; margin-right: 4px"
+                  width="24"
+                  height="24"
+                  src="https://img.icons8.com/emoji/48/star-emoji.png"
+                  alt="star-emoji"
+                /><span>4.5</span>
+              </p>
+              <h4>Pet Bed</h4>
+              <p>$39.99</p>
+            </div>
+          </div>
+          <div class="bg-white px-10 py-2 flex gap-4 items-center">
+            <img src="./assets/dog-cartoon.png" alt="dog" />
+            <div class="flex justify-center flex-col">
+              <p>
+                <img
+                  style="display: inline-block; margin-right: 4px"
+                  width="24"
+                  height="24"
+                  src="https://img.icons8.com/emoji/48/star-emoji.png"
+                  alt="star-emoji"
+                /><span>4.5</span>
+              </p>
+              <h4>Pet Bed</h4>
+              <p>$39.99</p>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured section  -->
+    <section class="px-44 mb-8">
+      <h2 class="text-2xl mb-10">Everyday low Price</h2>
+      <div class="flex justify-between">
+        <div class="pl-20 flex justify-center flex-col gap-2 bg-gradient-to-r from-violet-200 to-fuchsia-400 p-4 min-h-[30vh] w-3/5 relative rounded-xl">
+          <p class="text-sm">Under Price</p>
+          <h3 class="text-3xl">Pet Grooming Mitt</h3>
+          <p class="text-white text-2xl">(Easy Hair Removal)</p>
+          <h1 class="text-4xl">$7.99</h1>
+          <img class="absolute right-0 w-2/5" src="./assets/cute-dog-mid.png" alt="" />
+        </div>
+        <div class="bg-gradient-to-r from-yellow-100 to-yellow-300 p-4 min-h-[48vh] w-4/12 relative rounded-xl">
+          <h3 class="text-2xl">T-Shirt for Dogs</h3>
+          <p class="text-4xl text-yellow-500">$7.99</p>
+          <img src="./assets/cute-pet-mid.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- faq section  -->
+    <section class="mx-44 p-8">
+      <h2 class="text-2xl mb-10">Frequently Asked Questions</h2>
+      <div class="mb-4 collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="mb-4 collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="mb-4 collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+    </section>
+    <!-- News section  -->
+    <section class="mx-44 mb-8 mt-20 flex gap-6 p-4 bg-white relative z-10 rounded-xl">
+      <img src="./assets/cute-pet-mid.png" alt="dog" />
+      <div class="flex gap-4 flex-col justify-center">
+        <h2 class="text-3xl">Get Pawsome News!</h2>
+        <p class="text-lg">Exclusive training tips, ticks, product deals and more.</p>
+        <input class="px-4 py-2 border-2" type="email" placeholder="Enter email...." />
+        <button class="btn btn-warning w-max">Subscribe</button>
+      </div>
+    </section>
+    <!-- <div class="hero bg-base-200 min-h-screen">
+      <div class="hero-content flex-col lg:flex-row">
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+          class="max-w-sm rounded-lg shadow-2xl" />
+        <div>
+          <h1 class="text-5xl font-bold">Get Pawsome News!</h1>
+          <p class="py-6">
+            Exclusive training tips, ticks, product deals and more.</p>
+          <input type="email" placeholder="Enter email...." />
+          <button class="btn btn-primary">Subscribe</button>
+        </div>
+      </div>
+    </div> -->
+    <!-- footer  -->
+    <footer class="bg-yellow-200 px-44 pt-[270px] mt-[-260px] pb-32 flex justify-between items-end">
+      <div class="w-4/12">
+        <div>
+          <img src="./assets/logo-header.png" alt="logo" />
+          <span>Browse<span class="text-yellow-500">4</span>Pets</span>
+        </div>
+        <p>
+          Discover a world of treats, toys, and essentials handpicked for your
+          furry friends
+        </p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="#" class="">Find a pet</a>
+        <a href="#" class="">Breeds</a>
+        <a href="#" class="">Contact us</a>
+      </div>
+      <div >
+        <p>Follow Us</p>
+        <div class="flex gap-2">
+          <a href="#">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-glyphs/30/facebook-new.png"
+              alt="facebook-new"
+            />
+          </a>
+          <a href="#">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios/50/instagram-new--v1.png"
+              alt="instagram-new--v1"
+            />
+          </a>
+          <a href="#">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-glyphs/30/linkedin.png"
+              alt="linkedin"
+            />
+          </a>
+          <a href="#">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios/50/youtube-play--v1.png"
+              alt="youtube-play--v1"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
